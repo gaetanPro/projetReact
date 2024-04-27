@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<style>
+  .zone1,
+  .zone2 {
+    position: relative;
+    overflow: hidden;
+    display: none;
+    background: linear-gradient(to bottom,
+        #77B5FE 20%,
+        /* Light blue (top) */
+        #ffffff 85%,
+        /* White (middle) */
+        #5f3e00 5%
+        /* Light blue (bottom) */
+      );
+
+
+    width: 1500px;
+    height: 800px;
+    padding: 10px;
+    color: aquamarine;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    transition: animation1 5s linear ease-in-out;
+
+    @keyframes animation1 {
+      0% {
+        background-color: blueviolet;
+      }
+
+      50% {
+        background-color: aquamarine;
+      }
+
+      100% {
+        background-color: blueviolet;
+      }
+    }
+
+
+  }
+
+  .ElementDeplacer {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    border-radius: 100%;
+    animation: deplacerElt ease-in-out ;
+    
+  }
+
+  @keyframes deplacerElt {
+    from{transform: translateX(0);}
+    to {
+      transform: translateX(1500px);
+    }
+    
+  }
+
+  .solei {}
+
+  .solei div {
+    right: 120px !important;
+    top: 60px;
+    position: absolute;
+    right: 10px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: linear-gradient(#f8741c, #e9e63d, #d1e60f);
+
+  }
+
+  .solei div:nth-child(1) {
+    filter: blur(0px);
+    animation: rotation 10s linear infinite;
+  }
+
+  .solei div:nth-child(2) {
+    filter: blur(30px);
+    animation: rotation 10s linear infinite;
+
+  }
+
+  .solei div:nth-child(3) {
+    filter: blur(60px);
+    animation: rotation 10s linear infinite;
+  }
+
+  .solei div:nth-child(4) {
+    filter: blur(90px);
+    animation: rotation 10s linear infinite;
+  }
+
+  .solei div:nth-child(5) {
+    filter: blur(120px);
+    animation: rotation 10s linear infinite;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes deplacer {
+
+    from {
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%)
+    }
+
+    ;
+
+    to {
+      transform: translateX(50%);
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+    }
+
+  }
+</style>
+
+<body>
+
+  <div class="calculons">
+    <form method="post" class="container">
+      <div><label for="">valeur1</label>
+        <input type="number" name="" id="a">
+      </div>
+      <div> <label for="">valeur2</label>
+        <input type="number" name="" id="b">
+      </div>
+      <div><label for="">valeur 3</label>
+        <input type="number" name="" id="c">
+      </div>
+      <input type="button" value="calculer" onclick="calculeDiscriminant()" name="calculer">
+    </form>
+  </div>
+
+  <div class="zone1">
+
+    <div style="position: relative; display: flex; flex-direction: row; justify-content: space-between; ">
+      <div class="cloud-sun">
+      </div style=" right: 40px; top: 180px; position: absolute; z-index: 10;">
+      <div class="cloud-sun">
+        <div>
+          <div class="cloud-sun">
+
+          </div>
+        </div>
+
+
+      </div>
+      <div
+        style=" animation: deplacer 2s ease-in-out forwards; right: 40px; top: 180px; position: absolute; z-index: 10;">
+        <div class="cloud-sun">
+        </div>
+      </div>
+
+      <div class="cloud-sun">
+      </div>
+      <div class="cloud-sun">
+      </div>
+    </div>
+
+    <div class="solei">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <img src="dinosaure.png" class="ElementDeplacer" width="500" height="500">
+    <!-- <div class="ElementDeplacer"></div> -->
+    la racine delta > 0
+    <div
+      style="display: flex; flex-direction: row; gap: 10; align-items: center; justify-content: space-between; position: absolute; bottom: 80px; ">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+    </div>
+  </div>
+  <div class="zone2">
+    zone2
+  </div>
+
+
+  <!--   <div class="trans">
+        <div class="raining-cloud">      
+      </div>
+</div>
+    
+    <div class="nuage2">
+
+    </div> -->
+
+
+</body>
+<script src="index.js"></script>
+
+</html>
