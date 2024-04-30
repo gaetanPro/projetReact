@@ -63,7 +63,26 @@
     
   }
 
+  .ElementVolant {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    bottom: 160px;
+    left: 0;
+    border-radius: 100%;
+    animation: deplacerElt1 ease-in-out ;
+  }
+
   @keyframes deplacerElt {
+    from{transform: translateX(0);}
+    to {
+      transform: translateX(1500px);
+    }
+    
+  }
+
+  @keyframes deplacerElt1 {
     from{transform: translateX(0);}
     to {
       transform: translateX(1500px);
@@ -143,15 +162,17 @@
 
 <body>
 
+  <h1> Resolution d'une équation du second dégré de la forme ax2  + bx + c = 0 </h1>
+
   <div class="calculons">
     <form method="post" class="container">
-      <div><label for="">valeur1</label>
+      <div><label for="">valeur_a</label>
         <input type="number" name="" id="a">
       </div>
-      <div> <label for="">valeur2</label>
+      <div> <label for="">valeur_b</label>
         <input type="number" name="" id="b">
       </div>
-      <div><label for="">valeur 3</label>
+      <div><label for="">valeur_c</label>
         <input type="number" name="" id="c">
       </div>
       <input type="button" value="calculer" onclick="calculeDiscriminant()" name="calculer">
@@ -209,7 +230,53 @@
     </div>
   </div>
   <div class="zone2">
-    zone2
+    <div style="position: relative; display: flex; flex-direction: row; justify-content: space-between; ">
+      <div class="cloud-sun">
+      </div style=" right: 40px; top: 180px; position: absolute; z-index: 10;">
+      <div class="cloud-sun">
+        <div>
+          <div class="cloud-sun">
+
+          </div>
+        </div>
+
+
+      </div>
+      <div
+        style=" animation: deplacer 2s ease-in-out forwards; right: 40px; top: 180px; position: absolute; z-index: 10;">
+        <div class="cloud-sun">
+        </div>
+      </div>
+
+      <div class="cloud-sun">
+      </div>
+      <div class="cloud-sun">
+      </div>
+    </div>
+
+    <div class="solei">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <img src="dinoVolant.jpg" class="ElementVolant" width="500" height="500">
+    <!-- <div class="ElementDeplacer"></div> -->
+    la racine delta < 0
+    <div
+      style="display: flex; flex-direction: row; gap: 10; align-items: center; justify-content: space-between; position: absolute; bottom: 80px; ">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+      <img src="Screenshot_2024-04-26_083749-removebg-preview.png" width="150" height="150" alt="">
+    </div>
   </div>
 
 
@@ -226,4 +293,4 @@
 </body>
 <script src="index.js"></script>
 
-</html>
+</html>   
